@@ -418,3 +418,58 @@
 
  
 }
+/* === Juara Site Responsive Enhancements === */
+
+/* Global media safety */
+img, video { max-width: 100%; height: auto; }
+
+/* Section spacing tune for page titles */
+@media (max-width: 1199px) {
+  .page-title-area.pt-170 { padding-top: 140px !important; }
+  .page-title-area.pb-170 { padding-bottom: 120px !important; }
+}
+@media (max-width: 767px) {
+  .page-title-area.pt-170 { padding-top: 100px !important; }
+  .page-title-area.pb-170 { padding-bottom: 80px !important; }
+  .section-title .title { font-size: clamp(22px, 5vw, 34px) !important; }
+}
+
+/* Header compact tweaks on small screens */
+@media (max-width: 575px) {
+  .header-right .thm-btn { padding: 10px 12px; font-size: 14px; }
+  .logo img { height: 52px !important; }
+}
+
+/* Home (index) hero text sizing */
+.hero-slider .slide-title h2 { font-size: clamp(22px, 5.5vw, 44px); line-height: 1.25; }
+.hero-slider .slide-text p { font-size: clamp(14px, 3.8vw, 18px); }
+
+/* Home (index) paket list no-wrap fix on mobile */
+@media (max-width: 575px) {
+  .paket-list .text-nowrap { white-space: normal !important; }
+}
+
+/* Jadi-Juara page */
+.juara-page .history-wrap { grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 991px) { .juara-page .history-wrap { grid-template-columns: 1fr; } }
+.juara-page .history-media { width: 100%; max-width: 520px; margin-inline: auto; }
+.juara-page .history-media .circle-logo { width: clamp(220px, 55vw, 420px) !important; height: clamp(220px, 55vw, 420px) !important; }
+.juara-page .team-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important; }
+
+/* Kontak page */
+.contact-page .address-card { width: min(100%, 800px) !important; }
+@media (max-width: 575px) { .contact-page .contact-grid { grid-template-columns: 1fr; } }
+.google-map iframe { width: 100%; height: 420px; }
+@media (max-width: 575px) { .google-map iframe { height: 320px; } }
+
+/* Paket-Belajar page */
+.paket-page .card-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+@media (max-width: 575px) { .paket-page .pricing-grid { grid-template-columns: 1fr; } }
+.paket-page .section-title .title { font-size: clamp(22px, 5vw, 42px); }
+
+/* Harus-Jadi-Juara page */
+.value-area-new .value-grid-new { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important; }
+@media (max-width: 992px) { .value-area-new .value-grid-new { grid-template-columns: repeat(2, minmax(220px, 1fr)) !important; } }
+@media (max-width: 576px) { .value-area-new .value-grid-new { grid-template-columns: 1fr !important; } }
+.method-area-new .method-timeline { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+@media (max-width: 576px) { .method-area-new .method-timeline { grid-template-columns: 1fr; } }
