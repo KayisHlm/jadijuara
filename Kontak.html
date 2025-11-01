@@ -77,7 +77,7 @@
         .address-card .icon { width: 80px; height: 80px; border-radius: 18px; display: grid; place-items: center; color: #fff; margin: 0 auto 16px; background: linear-gradient(135deg, #23cc88, #00b980); box-shadow: 0 12px 24px rgba(2,6,23,.12); }
         .address-card .icon i { font-size: 32px; }
          /* Address card width */
-          .address-card { width:800px; margin: 0 auto; }
+          .address-card { max-width:800px; width:100%; margin: 0 auto; }
 
         .will-animate { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
         .will-animate.animate-in { opacity: 1; transform: translateY(0); }
@@ -101,6 +101,13 @@
 
   .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
   .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
+  /* Reveal elements when IntersectionObserver adds 'appear' */
+  .will-animate.appear { opacity: 1; transform: none; }
+  .will-animate.appear[data-animate="fadeInLeft"],
+  .will-animate.appear[data-animate="fadeInRight"],
+  .will-animate.appear[data-animate="fadeInUp"] { transform: none; }
+  /* Responsive Google Map iframe */
+  .google-map iframe { width: 100%; height: 380px; border: 0; }
 </style>
 </head>
 
@@ -146,8 +153,8 @@
                                     <ul class="main-menu-list ul_li">
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="Harus-Jadi-Juara.html">Harus Jadi Juara</a></li>
-                                        <li><a href="Jadi-Juara.html">Jadi Juara</a>
-                                        <li><a href="Paket-Belajar.html">Paket Belajar</a>
+                                        <li><a href="Jadi-Juara.html">Jadi Juara</a></li>
+                                        <li><a href="Paket-Belajar.html">Paket Belajar</a></li>
                                         <li class="active"><a href="Kontak.html">Kontak</a></li>
                                     </ul>
                                 </nav>

@@ -473,3 +473,28 @@ img, video { max-width: 100%; height: auto; }
 @media (max-width: 576px) { .value-area-new .value-grid-new { grid-template-columns: 1fr !important; } }
 .method-area-new .method-timeline { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 @media (max-width: 576px) { .method-area-new .method-timeline { grid-template-columns: 1fr; } }
+
+/* === Global Optimizations for Full Responsiveness === */
+/* Ensure slide backgrounds scale nicely across viewports */
+.slide-bg-image { background-size: cover; background-position: center; background-repeat: no-repeat; }
+
+/* Hero slider height tune on smaller screens */
+@media (max-width: 991px) { .hero-slider { min-height: 480px; } }
+@media (max-width: 575px) { .hero-slider { min-height: 420px; } }
+
+/* CTA buttons stack neatly on mobile */
+@media (max-width: 575px) {
+  .cta-btns { flex-wrap: wrap; gap: 12px !important; }
+  .cta-btns li { margin-bottom: 8px; }
+}
+
+/* Allow nav list to wrap on semi-large widths (avoids overflow) */
+@media (max-width: 1200px) { .main-menu-list.ul_li { flex-wrap: wrap; } }
+
+/* Accessibility: disable motion effects when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .will-animate { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+}
+
+/* Google Map container should size to its iframe height */
+.google-map { height: auto !important; }

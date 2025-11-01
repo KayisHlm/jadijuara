@@ -307,12 +307,22 @@
           .purpose-card.variant-orange .desc{ text-align:left; }
           .purpose-card.variant-orange .desc-list{ text-align:left; justify-items:start; }
           /* Alignment: Tujuan content center */
-          .purpose-card.variant-gold .desc{ text-align:center; }
+        .purpose-card.variant-gold .desc{ text-align:center; }
          </style>
   <style>
   /* Footer gradient: white → cream */
   .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
   .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
+</style>
+<style>
+  /* Responsiveness: Sejarah section grid & logo size */
+  @media (max-width: 991px) {
+    .history-section .history-wrap { grid-template-columns: 1fr; gap: 20px; }
+    .history-section .history-media { max-width: 440px; margin: 0 auto; }
+  }
+  .history-section .history-media .circle-logo { width: min(88vw, 360px); aspect-ratio: 1 / 1; height: auto; }
+  /* Map height tweak for small screens */
+  @media (max-width: 576px) { .address-section .map-embed iframe { height: 300px; } }
 </style>
 </head>
 
@@ -360,8 +370,8 @@
                                     <ul class="main-menu-list ul_li">
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="Harus-Jadi-Juara.html">Harus Jadi Juara</a></li>
-                                        <li class="active"><a href="Jadi-Juara.html">Jadi Juara</a>
-                                        <li><a href="Paket-Belajar.html">Paket Belajar</a>
+                                        <li class="active"><a href="Jadi-Juara.html">Jadi Juara</a></li>
+                                        <li><a href="Paket-Belajar.html">Paket Belajar</a></li>
                                         <li><a href="Kontak.html">Kontak</a></li>
                                     </ul>
                                 </nav>
