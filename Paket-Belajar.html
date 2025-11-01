@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jadi Juara</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=6">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=6">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=6">
+    <link rel="apple-touch-icon" href="favicon-32x32.png?v=6">
+
+    <!-- css include -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/uikit.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        /* Paket Belajar — page-scoped styles */
+        .paket-page .page-title-area { position: relative; }
+        .paket-page .page-title-area .banner-overlay { background: linear-gradient(135deg, rgba(15,23,42,.6), rgba(79,70,229,.35)); opacity: 1; }
+
+        .paket-section { position: relative; padding: 120px 0; overflow: hidden; }
+        .paket-section .section-title { margin-bottom: 40px; }
+        .paket-section .section-title .title { font-size: 42px; line-height: 1.15; letter-spacing: .5px; background: linear-gradient(90deg, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .paket-section p.lead { font-size: 18px; color: #475569; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+        .paket-card { border-radius: 18px; background: #ffffff; box-shadow: 0 12px 30px rgba(2,6,23,.08); padding: 28px; position: relative; overflow: hidden; transform: translateY(8px); opacity: 0; transition: transform .6s ease, box-shadow .6s ease, opacity .6s ease; }
+        .paket-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,.12); }
+        .paket-card .icon { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; color: #fff; margin-bottom: 16px; }
+        .paket-card .title { font-size: 20px; margin-bottom: 10px; }
+        .paket-card .desc { color: #64748b; }
+
+        .shape { position: absolute; border-radius: 50%; filter: blur(24px); opacity: .35; }
+
+        .paket-ipas { --accent-1: #10b981; --accent-2: #22c55e; background: linear-gradient(180deg, #f8fafc 0%, #ECFDF5 60%, #f8fafc 100%); }
+        .paket-ipas .icon { background: linear-gradient(135deg, #10b981, #22c55e); }
+
+        .paket-english { --accent-1: #3b82f6; --accent-2: #8b5cf6; background: linear-gradient(180deg, #f8fafc 0%, #EEF2FF 60%, #f8fafc 100%); }
+        .paket-english .icon { background: linear-gradient(135deg, #3b82f6, #8b5cf6); }
+
+        .paket-math { --accent-1: #f59e0b; --accent-2: #ef4444; background: linear-gradient(180deg, #f8fafc 0%, #FFF7ED 60%, #f8fafc 100%); }
+        .paket-math .icon { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+
+        .paket-bindo { --accent-1: #ec4899; --accent-2: #f43f5e; background: linear-gradient(180deg, #f8fafc 0%, #FDF2F8 60%, #f8fafc 100%); }
+        .paket-bindo .icon { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+
+        .will-animate { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+        .will-animate.animate-in { opacity: 1; transform: translateY(0); }
+        .will-animate[data-animate="fadeInLeft"] { transform: translateX(-18px); }
+        .will-animate[data-animate="fadeInRight"] { transform: translateX(18px); }
+        .will-animate.animate-in[data-animate="fadeInLeft"],
+        .will-animate.animate-in[data-animate="fadeInRight"] { transform: translateX(0); }
+
+        @media (max-width: 991px) {
+            .paket-section { padding: 90px 0; }
+            .paket-section .section-title .title { font-size: 34px; }
+        }
+        /* Smooth boundaries between sections */
+        .paket-section { box-shadow: inset 0 24px 48px -36px rgba(2,6,23,.06), inset 0 -24px 48px -36px rgba(2,6,23,.06); }
+        .paket-section::before, .paket-section::after { content: ""; position: absolute; left: 0; right: 0; height: 80px; pointer-events: none; z-index: 0; }
+        .paket-section::before { top: 0; background: linear-gradient(to bottom, #f8fafc 0%, rgba(248,250,252,0) 100%); }
+        .paket-section::after { bottom: 0; background: linear-gradient(to top, #f8fafc 0%, rgba(248,250,252,0) 100%); }
+        .paket-section .container { position: relative; z-index: 1; }
+        @media (max-width: 991px) { .paket-section::before, .paket-section::after { height: 60px; } }
+        /* IPAS top: white gradient overlay */
+        .paket-ipas::before { background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0) 100%); height: 100px; }
+  /* Footer gradient: white → cream */
+  .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
+  .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
+  /* Bindo bottom: white gradient overlay */
+  .paket-bindo::after { background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%); height: 100px; }
+   /* Paket Belajar — pricing accents */
+   .paket-pricing { --accent-1: #0ea5e9; --accent-2: #22d3ee; background: linear-gradient(180deg, #f8fafc 0%, #E0F2FE 60%, #f8fafc 100%); --accent-shadow: rgba(14,165,233,0.28); }
+   .paket-pricing .icon { background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); }
+   .pricing-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+
+   /* Section edge white gradients (top & bottom) */
+   .paket-pricing::before, .paket-pricing::after { content: ""; position: absolute; left: 0; right: 0; height: 100px; pointer-events: none; z-index: 2; }
+   .paket-pricing::before { top: 0; background: linear-gradient(to bottom, #ffffff 0%, rgba(255,255,255,0) 100%); }
+   .paket-pricing::after { bottom: 0; background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%); }
+   .paket-pricing .container { position: relative; z-index: 3; }
+   .paket-pricing .shape { z-index: 1; }
+   @media (max-width: 991px) { .paket-pricing::before, .paket-pricing::after { height: 80px; } }
+   /* Desain kartu baru: modern, animatif, berbasis palet warna */
+    .paket-card { position: relative; display: flex; flex-direction: column; height: 100%; padding: 22px; border-radius: 20px; border: 1px solid rgba(2,6,23,.08); background: radial-gradient(140% 140% at 0% 0%, #ffffff 0%, #F8FAFC 100%); box-shadow: 0 10px 30px rgba(2,6,23,.08); gap: 14px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .paket-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity .25s ease; }
+    .paket-card:hover { transform: translateY(-6px); box-shadow: 0 16px 42px rgba(2,6,23,.08), 0 20px 48px var(--accent-shadow); border-color: rgba(2,6,23,.12); }
+    .paket-card:hover::before { opacity: .55; }
+
+    /* Header */
+    .paket-card .card-header { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 8px 4px; min-height: auto; text-align: center; background: transparent; }
+    .paket-card .card-header .icon { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); color: #fff; position: relative; box-shadow: none; transition: transform .2s ease, filter .2s ease; }
+    .paket-card .card-header .icon:empty::before { content: "★"; font-size: 26px; line-height: 1; }
+    .paket-card:hover .card-header .icon { transform: translateY(-2px) scale(1.04); filter: drop-shadow(0 10px 22px var(--accent-shadow)) drop-shadow(0 0 14px rgba(14,165,233,0.35)); }
+     .paket-card .card-header .icon:hover { transform: translateY(-2px) scale(1.04); filter: drop-shadow(0 10px 22px var(--accent-shadow)) drop-shadow(0 0 14px rgba(14,165,233,0.35)); }
+    .paket-card .card-header .icon::after { display: none; }
+     /* pseudo-element glow disabled to prevent inner tinting of white icon */
+    .paket-card .card-header .icon:hover { transform: translateY(-2px) scale(1.04); }
+     /* icon glow handled via ::after; no drop-shadow on <i> */
+    .paket-card:hover .card-header .title { text-shadow: 0 3px 16px var(--accent-shadow); }
+    .paket-card .card-header .title:hover { text-shadow: 0 3px 16px var(--accent-shadow); }
+    .paket-card .card-header .title { position: relative; font-size: 20px; font-weight: 800; line-height: 1.3; margin: 0; letter-spacing: .2px; padding-bottom: 6px; }
+    .paket-card .card-header .title::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 56px; height: 3px; border-radius: 3px; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); opacity: .85; }
+
+    /* Body */
+    .paket-card .card-body { display: flex; flex-direction: column; gap: 10px; }
+    .paket-card .card-body .desc { margin: 0; color: #334155; line-height: 1.65; }
+    .paket-card .features { list-style: disc; padding-left: 1.2em; margin: 0; color: #475569; }
+    .paket-card .features li { margin-bottom: 6px; }
+
+    /* Footer: harga di atas, tombol di bawah (tanpa card wrapper) */
+    .paket-card .card-footer { margin-top: auto; display: flex; flex-direction: column; align-items: stretch; gap: 12px; background: transparent; }
+    .paket-card .price span { display: inline; background: transparent; border: 0; border-radius: 0; padding: 0; font-size: 18px; font-weight: 800; color: #0f172a; letter-spacing: .2px; box-shadow: none; }
+
+    /* CTA dengan animasi gradien */
+    .paket-card .thm-btn { width: 100%; display: inline-block; padding: 12px 16px; font-size: 14px; line-height: 1.2; border-radius: 12px; color: #fff; text-align: center; background-image: linear-gradient(135deg, var(--accent-1), var(--accent-2)); background-size: 200% 200%; transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, background-position .3s ease; box-shadow: 0 10px 24px rgba(2,6,23,.12); }
+    .paket-card:hover .thm-btn { transform: translateY(-1px); }
+    .paket-card .thm-btn:hover { background-position: 100% 0; filter: brightness(1.06); box-shadow: 0 14px 28px var(--accent-shadow); }
+
+    /* Responsif */
+    @media (max-width: 520px) {
+      .paket-card { padding: 18px; border-radius: 16px; }
+      .paket-card .card-header .title { font-size: 18px; }
+      .paket-card .price span { font-size: 17px; padding: 8px 12px; }
+      .paket-card .thm-btn { font-size: 13px; padding: 11px 14px; }
+    }
+
+    .paket-card.highlight { border: 2px solid var(--accent-2); box-shadow: 0 20px 46px rgba(2,6,23,.12); }
+    .paket-card:hover .card-header, .paket-card:hover .card-body { filter: none; }
+   /* Benefit Utama — layout & styling */
+   .benefit-card .title { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 12px; letter-spacing: .2px; position: relative; padding-bottom: 8px; }
+   .benefit-card .title::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 88px; height: 3px; border-radius: 999px; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); opacity: .9; }
+
+   .benefit-card .desc { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px 16px; padding: 0; margin: 0; color: #334155; }
+   .benefit-card .desc li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; background: rgba(255,255,255,.90); border: 1px solid rgba(2,6,23,.06); border-radius: 14px; padding: 12px 14px; box-shadow: 0 8px 20px rgba(2,6,23,.06); transition: transform .2s ease, box-shadow .2s ease; }
+   .benefit-card .desc li:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(2,6,23,.08), 0 14px 30px var(--accent-shadow); }
+   .benefit-card .desc li i { flex: 0 0 auto; width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); filter: drop-shadow(0 6px 14px var(--accent-shadow)); }
+   .benefit-card .desc li i::before { font-size: 16px; }
+        .benefit-card .desc .benefit-title { font-size: 16px; font-weight: 700; color: #0f172a; letter-spacing: .2px; }
+        .benefit-card .desc .benefit-text { font-size: 14px; color: #475569; line-height: 1.6; }
+   @media (max-width: 520px) {
+     .benefit-card .desc { grid-template-columns: 1fr; }
+   }
+ </style>
+ </head>
+
+<body class="paket-page">
+
+
+    <!-- body wrap start -->
+    <div class="body_wrap">
+
+        <!-- preloder start -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- preloder end -->
+
+        <!-- back to top start -->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- back to top end -->
+
+        <!-- header start -->
+        <header class="header-area">   
+            <div class="header-bottom-area" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2 col-6">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/image-asset/logo.jpeg" style="height: 70px;" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 d-none d-lg-block">
+                            <div class="main-menu-wrap">
+                                <nav id="mobile-menu" class="main-menu">
+                                    <ul class="main-menu-list ul_li">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="Harus-Jadi-Juara.html">Harus Jadi Juara</a></li>
+                                        <li><a href="Jadi-Juara.html">Jadi Juara</a>
+                                        <li class="active"><a href="Paket-Belajar.html">Paket Belajar</a>
+                                        <li><a href="Kontak.html">Kontak</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-6">
+                            <div class="header-right">
+                                <div class="header-btn">
+                                    <a class="thm-btn" href="Kontak.html">Daftar Sekarang</a>
+                                </div>
+                                <div class="side-mobile-menu">
+                                    <button class="side-info-close"><i class="far fa-times"></i></button>
+                                    <div class="mobile-menu"></div>
+                                </div>
+                                <div class="side-menu-icon d-lg-none">
+                                    <button class="side-toggle"><i class="far fa-bars"></i></button>
+                                </div>
+                                <div class="offcanvas-overlay"></div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <main>
+         <!-- page title start -->
+         <div class="page-title-area section-notch pt-170 pb-170" data-background="assets/img/image-asset/img-6.jpg">
+            <div class="banner-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="page-title">
+                            <h2>Paket Belajar</h2>
+                            <div class="breadcrumb-list text-left">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>Paket Belajar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page title end -->
+
+        <!-- Paket Belajar (New Layout) start -->
+        <section class="paket-section paket-pricing will-animate">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="section-title text-center mb-40">
+                            <h2 class="title">Pilih Paket Juara Anda!</h2>
+                            <p class="lead">Tiga pilihan paket untuk menemani perjalanan belajar anak Anda. Semua paket sudah termasuk bimbingan mata pelajaran utama, materi lengkap, dan laporan kemajuan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit Utama -->
+                <div class="row justify-content-center mb-30">
+                    <div class="col-lg-10">
+                        <div class="paket-card benefit-card will-animate" data-animate="fadeInUp" data-animate-delay="0.1s">
+                            <div class="title">Benefit Utama <br>(Berlaku untuk semua paket)</div>
+                            <ul class="desc">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="benefit-title"><b>Bank Latihan Soal (Latsol)</b></div>
+                                    <div class="benefit-text">Memperbanyak latihan untuk mematangkan pemahaman.</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="benefit-title"><b>Materi & Rangkuman Eksklusif</b></div>
+                                    <div class="benefit-text">Poin-poin penting pelajaran disajikan secara ringkas dan mudah dimengerti.</div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="benefit-title"><b>Laporan Hasil Belajar</b></div>
+                                    <div class="benefit-text">Pantau terus perkembangan dan kemajuan belajar anak Anda secara berkala.</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paket Grid -->
+                <div class="card-grid pricing-grid">
+                    <!-- Paket Jago -->
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.15s">
+                        <div class="card-header">
+                            <div class="icon"><i class="fas fa-star"></i></div>
+                            <div class="title">Paket Jago</div>
+                        </div>
+                        <div class="card-body">
+                            <p class="desc">Pilihan ringkas untuk anak Anda yang ingin mencoba bimbingan belajar fokus.</p>
+                            <ul class="features">
+                                <li>4x pertemuan <br>(masing-masing 1 jam)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price"><span>Rp 216.000</span></div>
+                            <a class="thm-btn" href="Kontak.html">Daftar Paket Jago</a>
+                        </div>
+                    </div>
+
+                    <!-- Paket Unggul -->
+                    <div class="paket-card will-animate" data-animate="fadeInUp" data-animate-delay="0.25s">
+                        <div class="card-header">
+                            <div class="icon"><i class="fas fa-trophy"></i></div>
+                            <div class="title">Paket Unggul</div>
+                        </div>
+                        <div class="card-body">
+                            <p class="desc">Pilihan seimbang dengan durasi belajar lebih panjang untuk pendalaman materi yang lebih efektif.</p>
+                            <ul class="features">
+                                <li>8x pertemuan <br>(masing-masing 1,5 jam)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price"><span>Rp 540.000</span></div>
+                            <a class="thm-btn" href="Kontak.html">Daftar Paket Unggul</a>
+                        </div>
+                    </div>
+
+                    <!-- Paket Juara (highlight) -->
+                    <div class="paket-card will-animate highlight" data-animate="fadeInUp" data-animate-delay="0.35s">
+                        <div class="card-header">
+                            <div class="icon"><i class="fas fa-crown"></i></div>
+                            <div class="title">Paket Juara</div>
+                        </div>
+                        <div class="card-body">
+                            <p class="desc">Paket terlengkap kami untuk bimbingan paling intensif dan hasil paling maksimal.</p>
+                            <ul class="features">
+                                <li>12x pertemuan <br>(masing-masing 1,5 jam)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price"><span>Rp 778.000</span></div>
+                            <a class="thm-btn" href="Kontak.html">Daftar Paket Juara</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="shape" style="width:160px;height:160px;background:#22d3ee;left:-40px;top:60px;"></span>
+            <span class="shape" style="width:120px;height:120px;background:#0ea5e9;right:10%;bottom:60px;"></span>
+        </section>
+        <!-- Paket Belajar (New Layout) end -->
+
+        </main>
+
+        <!-- footer start -->
+        <footer>
+            <div class="footer-area">
+                <div class="footer-bottom pt-100 pb-60">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>About Jadi Juara</h3>
+                                    <p style="text-align: justify; line-height: 1.3;">Jadi Juara adalah bimbingan belajar online untuk siswa SD kelas 1-6 dengan fokus utama pada mata pelajaran Bahasa Indonesia, Bahasa Inggris, Matematika, dan IPAS. <br><br>
+Kami membantu anak belajar dengan cara yang menyenangkan, interaktif, dan sesuai kebutuhan mereka. Melalui pendekatan personal dan pemantauan rutin. Kami memastikan setiap anak dapat berkembang, percaya diri, dan menikmati proses belajar setiap hari.
+</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>Kontak Person</h3>
+                                    <ul class="contact-list">
+                                        <li><i class="fas fa-user"></i> Admin Jadi Juara</li>
+                                        <li><i class="fas fa-phone"></i> <a href="https://wa.me/628567887669">+62 856-788-7669</a></li>
+                                        <li><i class="fas fa-envelope"></i> <a href="mailto:Jadijuarastudy@gmail.com">Jadijuarastudy@gmail.com</a></li>
+                                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/jadijuara_id/" target="_blank" rel="noopener noreferrer">@jadijuara_id</a></li>
+                                        <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/share/19nhqr2nK5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Jadi Juaraa Tembalang</a></li>
+                                        <li><i class="fas fa-map-marker-alt"></i> Tembalang, Indonesia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="footer-widget mb-40">
+                                    <h3>Paket Belajar</h3>
+                                    <p>Tertarik dengan paket belajar kami? Daftar sekarang!</p>
+                                    <a class="thm-btn" href="Paket-Belajar.html">Daftar Paket Belajar</a>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+        
+    </div>
+    <!-- body wrap end -->
+
+    <!-- jquery include -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/jqueryui.js"></script>
+    <script src="assets/js/touchspin.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      (function(){
+        var els = Array.prototype.slice.call(document.querySelectorAll('.will-animate'));
+        if(!('IntersectionObserver' in window)) { els.forEach(function(el){ el.classList.add('animate-in'); }); return; }
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              var el = entry.target;
+              var delay = el.getAttribute('data-animate-delay');
+              if(delay) { el.style.transitionDelay = delay; }
+              el.classList.add('animate-in');
+              io.unobserve(el);
+            }
+          });
+        },{ threshold: 0.15 });
+        els.forEach(function(el){ io.observe(el); });
+      })();
+    </script>
+</body>
+
+
+</html>
