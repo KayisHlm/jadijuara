@@ -112,12 +112,18 @@
   @media (max-width: 576px) {
     .method-area-new .method-timeline { grid-template-columns: 1fr; }
   }
-/* Value grid: single row of four columns */
+/* Value grid: responsive auto-fit columns */
 .value-area-new .value-grid-new {
   display: grid;
-  grid-template-columns: repeat(4, minmax(220px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
   gap: 24px;
   align-items: stretch;
+}
+/* Ensure cards stretch to column width */
+.value-area-new .value-card-new { width: 100%; }
+/* Extra fallback breakpoints for tighter laptops */
+@media (max-width: 1200px) {
+  .value-area-new .value-grid-new { grid-template-columns: repeat(3, minmax(240px, 1fr)) !important; }
 }
 /* Responsive fallbacks */
 @media (max-width: 992px) {
