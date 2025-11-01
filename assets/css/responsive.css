@@ -438,6 +438,8 @@ img, video { max-width: 100%; height: auto; }
 @media (max-width: 575px) {
   .header-right .thm-btn { padding: 10px 12px; font-size: 14px; }
   .logo img { height: 52px !important; }
+  /* Pastikan judul di kanan logo tidak membungkus jadi 2 baris */
+  .logo-with-title .site-title { white-space: nowrap !important; font-size: 18px !important; }
 }
 
 /* Home (index) hero text sizing */
