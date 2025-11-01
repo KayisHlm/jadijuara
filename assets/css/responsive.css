@@ -448,6 +448,10 @@ img, video { max-width: 100%; height: auto; }
 @media (max-width: 575px) {
   .paket-list .text-nowrap { white-space: normal !important; }
 }
+/* Expand no-wrap fix to small tablets as well */
+@media (max-width: 768px) {
+  .paket-list .text-nowrap { white-space: normal !important; }
+}
 
 /* Jadi-Juara page */
 .juara-page .history-wrap { grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -458,6 +462,16 @@ img, video { max-width: 100%; height: auto; }
 
 /* Kontak page */
 .contact-page .address-card { width: min(100%, 800px) !important; }
+
+/* ===== Global overflow prevention & margin reset ===== */
+/* Clamp horizontal overflow for safety on small screens */
+@media (max-width: 991px) {
+  html, body, .body_wrap { overflow-x: hidden; }
+  /* Neutralize negative margins that can cause right-side spill */
+  .blog-wrapper, .post-details { margin-right: 0 !important; margin-left: 0 !important; }
+  .widget .widget-header { margin-right: 0 !important; margin-left: 0 !important; padding-left: 20px; padding-right: 20px; }
+  .contact-info .contact-info-head, .contact-info .social-icon { margin-right: 0 !important; margin-left: 0 !important; }
+}
 @media (max-width: 575px) { .contact-page .contact-grid { grid-template-columns: 1fr; } }
 .google-map iframe { width: 100%; height: 420px; }
 @media (max-width: 575px) { .google-map iframe { height: 320px; } }

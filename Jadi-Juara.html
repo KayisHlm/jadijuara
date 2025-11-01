@@ -334,6 +334,11 @@
   .history-section .history-media .circle-logo { width: min(88vw, 360px); aspect-ratio: 1 / 1; height: auto; }
   /* Map height tweak for small screens */
   @media (max-width: 576px) { .address-section .map-embed iframe { height: 300px; } }
+  /* Mobile: tighten spacing and text in Sejarah lead */
+  @media (max-width: 576px) {
+    .history-section .history-wrap { gap: 12px !important; }
+    .history-section .history-content .lead { font-size: 16px !important; line-height: 1.6; padding: 0 14px; }
+  }
 </style>
 </head>
 
@@ -371,8 +376,11 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-2 col-6">
-                            <div class="logo">
-                                <a href="index.html"><img src="assets/img/image-asset/logo.jpeg" style="height: 70px;" alt="logo"></a>
+                            <div class="logo logo-with-title" style="display: flex; align-items: center; gap: 10px;">
+                                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                                    <img src="assets/img/image-asset/logo.jpeg" style="height: 70px;" alt="logo">
+                                    <span class="site-title" style="font-weight: 700; font-size: 20px; color: #1f2a1f; line-height: 1;">Jadi Juara</span>
+                                </a>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-7 d-none d-lg-block">
