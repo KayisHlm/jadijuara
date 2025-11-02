@@ -440,6 +440,11 @@ img, video { max-width: 100%; height: auto; }
   .logo img { height: 52px !important; }
   /* Pastikan judul di kanan logo tidak membungkus jadi 2 baris */
   .logo-with-title .site-title { white-space: nowrap !important; font-size: 18px !important; }
+  /* Optimalkan alamat panjang agar membungkus rapi di mobile */
+  .address-text { white-space: normal !important; overflow-wrap: anywhere; word-break: break-word; line-height: 1.4; }
+  /* Jaga ukuran ikon pada kartu alamat agar tidak mengecil di mobile */
+  .address-item .icon { width: 36px; height: 36px; font-size: 20px; }
+  .address-item .icon i { font-size: 20px !important; }
 }
 
 /* Home (index) hero text sizing */
