@@ -1,688 +1,1045 @@
 <!doctype html>
 <html lang="zxx">
-
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Jadi Juara</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=6">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=6">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=6">
-    <link rel="apple-touch-icon" href="favicon-32x32.png?v=6">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png?v=6"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon-16x16.png?v=6"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=6" />
+    <link rel="apple-touch-icon" href="favicon-32x32.png?v=6" />
 
     <!-- css include -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/meanmenu.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/uikit.min.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-<style>
-  /* Footer gradient: white → cream */
-  .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
-  .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
-  /* Metode Belajar: coral background */
-  .method-area-new.cheerful { background: #dc4f3c; }
-  .method-area-new.cheerful .section-title .title,
-  .method-area-new.cheerful .section-title p { color: #fff; }
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/uikit.min.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+      /* Footer gradient: white → cream */
+      .footer-area {
+        background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%);
+      }
+      .footer-area .footer-top,
+      .footer-area .footer-bottom {
+        background: transparent;
+      }
+      /* Metode Belajar: coral background */
+      .method-area-new.cheerful {
+        background: #dc4f3c;
+      }
+      .method-area-new.cheerful .section-title .title,
+      .method-area-new.cheerful .section-title p {
+        color: #fff;
+      }
 
-  /* Metode Belajar: layout pusat dengan grid & konten terpusat */
-  .method-area-new .method-timeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    align-items: start;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .method-area-new .timeline-line,
-  .method-area-new .timeline-dot { display: none !important; }
-  .method-area-new .method-item { display: block; position: static !important; }
-  .method-area-new .method-card-new { width: 100%; text-align: center; margin: 0 !important; }
-  .method-area-new .method-card-new.left,
-  .method-area-new .method-card-new.right { margin: 0 !important; }
-  .method-area-new .method-icon-new { margin: 0 auto 16px; }
-  .method-area-new .method-benefits { justify-content: center; }
+      /* Metode Belajar: layout pusat dengan grid & konten terpusat */
+      .method-area-new .method-timeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+        align-items: start;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .method-area-new .timeline-line,
+      .method-area-new .timeline-dot {
+        display: none !important;
+      }
+      .method-area-new .method-item {
+        display: block;
+        position: static !important;
+      }
+      .method-area-new .method-card-new {
+        width: 100%;
+        text-align: center;
+        margin: 0 !important;
+      }
+      .method-area-new .method-card-new.left,
+      .method-area-new .method-card-new.right {
+        margin: 0 !important;
+      }
+      .method-area-new .method-icon-new {
+        margin: 0 auto 16px;
+      }
+      .method-area-new .method-benefits {
+        justify-content: center;
+      }
 
-  /* Seragamkan palet coral untuk semua card */
-  .method-item.theme-blue .method-icon-new,
-  .method-item.theme-orange .method-icon-new,
-  .method-item.theme-green .method-icon-new,
-  .method-item.theme-sand .method-icon-new { background: #fee2e2; border-color: #fecaca; }
+      /* Seragamkan palet coral untuk semua card */
+      .method-item.theme-blue .method-icon-new,
+      .method-item.theme-orange .method-icon-new,
+      .method-item.theme-green .method-icon-new,
+      .method-item.theme-sand .method-icon-new {
+        background: #fee2e2;
+        border-color: #fecaca;
+      }
 
-  .method-item.theme-blue .method-icon-new i,
-  .method-item.theme-orange .method-icon-new i,
-  .method-item.theme-green .method-icon-new i,
-  .method-item.theme-sand .method-icon-new i { color: #DB4F3E; }
+      .method-item.theme-blue .method-icon-new i,
+      .method-item.theme-orange .method-icon-new i,
+      .method-item.theme-green .method-icon-new i,
+      .method-item.theme-sand .method-icon-new i {
+        color: #db4f3e;
+      }
 
-  .method-item.theme-blue .method-card-new,
-  .method-item.theme-orange .method-card-new,
-  .method-item.theme-green .method-card-new,
-  .method-item.theme-sand .method-card-new { border-color: #f4b4a8; box-shadow: 0 6px 16px rgba(219, 79, 62, 0.10); }
+      .method-item.theme-blue .method-card-new,
+      .method-item.theme-orange .method-card-new,
+      .method-item.theme-green .method-card-new,
+      .method-item.theme-sand .method-card-new {
+        border-color: #f4b4a8;
+        box-shadow: 0 6px 16px rgba(219, 79, 62, 0.1);
+      }
 
-  .method-item.theme-blue .benefit-tag,
-  .method-item.theme-orange .benefit-tag,
-  .method-item.theme-green .benefit-tag,
-  .method-item.theme-sand .benefit-tag { background: #fee2e2; border-color: #fecaca; color: #7f1d1d; }
+      .method-item.theme-blue .benefit-tag,
+      .method-item.theme-orange .benefit-tag,
+      .method-item.theme-green .benefit-tag,
+      .method-item.theme-sand .benefit-tag {
+        background: #fee2e2;
+        border-color: #fecaca;
+        color: #7f1d1d;
+      }
 
-  .method-item.theme-blue .timeline-dot,
-  .method-item.theme-orange .timeline-dot,
-  .method-item.theme-green .timeline-dot,
-  .method-item.theme-sand .timeline-dot { border-color: #DB4F3E; background: #ffffff; }
+      .method-item.theme-blue .timeline-dot,
+      .method-item.theme-orange .timeline-dot,
+      .method-item.theme-green .timeline-dot,
+      .method-item.theme-sand .timeline-dot {
+        border-color: #db4f3e;
+        background: #ffffff;
+      }
 
-  /* Value cards: hover & motion effects */
-  .value-card-new { transform-style: preserve-3d; backface-visibility: hidden; transition: transform .25s ease, box-shadow .3s ease; }
-  .value-card-new:hover { box-shadow: 0 30px 60px rgba(0,0,0,.15); }
-  .value-card-new::before {
-    content:""; position:absolute; inset:-2px; border-radius: 20px;
-    background: linear-gradient(120deg, rgba(255,255,255,0) 35%, rgba(255,255,255,.45) 50%, rgba(255,255,255,0) 65%);
-    transform: translateX(-120%);
-    transition: transform .7s ease;
-    pointer-events:none; mix-blend-mode: screen;
-  }
-  .value-card-new:hover::before { transform: translateX(140%); }
+      /* Value cards: hover & motion effects */
+      .value-card-new {
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.3s ease;
+      }
+      .value-card-new:hover {
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+      }
+      .value-card-new::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: 20px;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0) 35%,
+          rgba(255, 255, 255, 0.45) 50%,
+          rgba(255, 255, 255, 0) 65%
+        );
+        transform: translateX(-120%);
+        transition: transform 0.7s ease;
+        pointer-events: none;
+        mix-blend-mode: screen;
+      }
+      .value-card-new:hover::before {
+        transform: translateX(140%);
+      }
 
-  .value-card-new .value-content h5,
-  .value-card-new .value-content p { transition: transform .25s ease, color .25s ease; }
-  .value-card-new:hover .value-content h5 { transform: translateY(-2px); color: #1f2937; }
-  .value-card-new:hover .value-content p { transform: translateY(-1px); color: #4b5563; }
+      .value-card-new .value-content h5,
+      .value-card-new .value-content p {
+        transition:
+          transform 0.25s ease,
+          color 0.25s ease;
+      }
+      .value-card-new:hover .value-content h5 {
+        transform: translateY(-2px);
+        color: #1f2937;
+      }
+      .value-card-new:hover .value-content p {
+        transform: translateY(-1px);
+        color: #4b5563;
+      }
 
-  .value-icon-new { position: relative; }
-  .value-icon-new::after { content:""; position:absolute; inset:-4px; border-radius:50%; border:2px solid rgba(0,0,0,.12); animation: pulseGlow 3s ease-in-out infinite; }
-  @keyframes pulseGlow { 0% { transform: scale(1); opacity:.7; } 100% { transform: scale(1.25); opacity:0; } }
+      .value-icon-new {
+        position: relative;
+      }
+      .value-icon-new::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0.12);
+        animation: pulseGlow 3s ease-in-out infinite;
+      }
+      @keyframes pulseGlow {
+        0% {
+          transform: scale(1);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1.25);
+          opacity: 0;
+        }
+      }
 
-  /* Glow color per tema */
-  .value-glow.gradient-green { background: radial-gradient(120px 120px at 50% 50%, rgba(35,204,136,.28), rgba(142,207,53,0)); }
-  .value-glow.gradient-orange { background: radial-gradient(120px 120px at 50% 50%, rgba(255,79,88,.28), rgba(255,180,0,0)); }
-  .value-glow.gradient-blue { background: radial-gradient(120px 120px at 50% 50%, rgba(1,203,173,.28), rgba(71,161,242,0)); }
-  .value-glow.gradient-pink { background: radial-gradient(120px 120px at 50% 50%, rgba(232,90,202,.28), rgba(252,78,101,0)); }
-  .value-card-new:hover .value-glow { opacity: .18; }
+      /* Glow color per tema */
+      .value-glow.gradient-green {
+        background: radial-gradient(
+          120px 120px at 50% 50%,
+          rgba(35, 204, 136, 0.28),
+          rgba(142, 207, 53, 0)
+        );
+      }
+      .value-glow.gradient-orange {
+        background: radial-gradient(
+          120px 120px at 50% 50%,
+          rgba(255, 79, 88, 0.28),
+          rgba(255, 180, 0, 0)
+        );
+      }
+      .value-glow.gradient-blue {
+        background: radial-gradient(
+          120px 120px at 50% 50%,
+          rgba(1, 203, 173, 0.28),
+          rgba(71, 161, 242, 0)
+        );
+      }
+      .value-glow.gradient-pink {
+        background: radial-gradient(
+          120px 120px at 50% 50%,
+          rgba(232, 90, 202, 0.28),
+          rgba(252, 78, 101, 0)
+        );
+      }
+      .value-card-new:hover .value-glow {
+        opacity: 0.18;
+      }
 
-  @media (max-width: 576px) {
-    .method-area-new .method-timeline { grid-template-columns: 1fr; }
-  }
-/* Value grid: responsive auto-fit columns */
-.value-area-new .value-grid-new {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-  gap: 24px;
-  align-items: stretch;
-}
-/* Ensure cards stretch to column width */
-.value-area-new .value-card-new { width: 100%; }
-/* Extra fallback breakpoints for tighter laptops */
-@media (max-width: 1200px) {
-  .value-area-new .value-grid-new { grid-template-columns: repeat(3, minmax(240px, 1fr)) !important; }
-}
-/* Responsive fallbacks */
-@media (max-width: 992px) {
-  .value-area-new .value-grid-new {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-  }
-}
-@media (max-width: 576px) {
-  .value-area-new .value-grid-new {
-    grid-template-columns: 1fr !important;
-  }
-}
-</style>
-                <style id="about-section-styles">
-                  /* ===== About Section: CSS terpusat, grid stabil, desain menarik ===== */
-                  .about-area {
-                    background: linear-gradient(180deg, rgba(233,220,197,0.15) 0%, rgba(255,255,255,0.95) 100%);
-                    /* Kurangi jarak atas section agar judul lebih dekat ke tepi atas */
-                    padding-top: 88px; /* override dari pt-120 */
-                  }
-                  /* Grid 2 kolom yang stabil */
-                  .about-area .about-grid {
-                    display: grid;
-                    grid-template-columns: 1fr; /* jadikan satu kolom */
-                    gap: 28px;
-                    align-items: start;
-                    justify-items: center; /* pusatkan konten */
-                  }
-                  @media (max-width: 992px) {
-                    .about-area .about-grid { grid-template-columns: 1fr; gap: 20px; }
-                  }
-                  /* Hilangkan aturan image frame karena gambar dihapus */
-                  /* Info wrapper spacing */
-                  .about-area .about-info { width: 100%; max-width: 980px; margin: 0 auto; }
-                  /* Kurangi jarak atas keseluruhan konten About secara ringan */
-                  .about-area .about-info .about-content-two { margin-top: 14px; }
-                  /* Perbesar jarak bawah judul, sedikit kurangi jarak atas */
-                  .about-area .about-info .section-title { margin-top: 0 !important; margin-bottom: 32px !important; text-align: center; }
-                  .about-area .about-info .section-title .title {
-                    line-height: 1.2;
-                    color: var(--clr-deep-green, #1f4d32);
-                    position: relative;
-                  }
-                  .about-area .about-info .section-title .title::after {
-                    content: "";
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: -10px;
-                    width: 64px;
-                    height: 4px;
-                    border-radius: 2px;
-                    background: linear-gradient(90deg, var(--clr-orange, #d7633b), var(--clr-yellow, #efc24e));
-                  }
-                  /* Panel konten */
-                  .about-content-two .about-panel {
-                    background: #ffffff;
-                    border-radius: 14px;
-                    padding: 24px 22px;
-                    box-shadow: 0 14px 30px rgba(14, 72, 99, 0.08);
-                    border: 1px solid rgba(14, 72, 99, 0.08);
-                  }
-                  .about-content-two .about-panel .lead {
-                    font-size: 20px;
-                    line-height: 1.6;
-                    color: var(--clr-green, #2f6f42);
-                    font-weight: 600;
-                    margin-bottom: 8px;
-                  }
-                  .about-content-two .about-panel p { color: #555; margin-bottom: 12px; }
-                  /* Grid kartu keunggulan */
-                  .about-content-two .about-cards {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    gap: 16px;
-                    margin-top: 12px;
-                  }
-                  @media (min-width: 992px) {
-                    .about-content-two .about-cards {
-                      grid-template-columns: 1fr 1fr;
-                      gap: 18px 20px;
-                    }
-                  }
-                  .about-content-two .about-card {
-                    position: relative;
-                    background: #fff;
-                    border: 1px solid rgba(14,72,99,0.08);
-                    border-radius: 14px;
-                    padding: 18px 16px 18px 20px;
-                    box-shadow: 0 6px 18px rgba(14,72,99,0.08);
-                    transition: transform 220ms ease, box-shadow 220ms ease;
-                    overflow: hidden;
-                    opacity: 0;
-                    transform: translateY(14px);
-                    animation: fadeUp 520ms ease forwards;
-                  }
-                  .about-content-two .about-card::before {
-                    content: "";
-                    position: absolute;
-                    left: 0; top: 0; bottom: 0;
-                    width: 4px;
-                    background: linear-gradient(180deg, var(--clr-green, #2f6f42), rgba(47,111,66,0.5));
-                  }
-                  .about-content-two .about-card:hover {
-                    transform: translateY(-3px);
-                    box-shadow: 0 12px 28px rgba(14,72,99,0.14);
-                  }
-                  .about-content-two .about-card .card-badge {
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 28px; height: 28px;
-                    border-radius: 50%;
-                    background: rgba(47,111,66,0.1);
-                    color: var(--clr-green, #2f6f42);
-                    font-weight: 700;
-                    margin-bottom: 8px;
-                  }
-                  .about-content-two .about-card .card-title {
-                    font-size: 18px;
-                    color: var(--clr-deep-green, #0f2b0a);
-                    margin: 0 0 6px;
-                    font-weight: 600;
-                  }
-                  .about-content-two .about-card .card-desc {
-                    margin: 0;
-                    color: #555;
-                  }
-                  /* Animasi masuk bertahap */
-                  .about-content-two .about-card:nth-child(1){ animation-delay: 60ms; }
-                  .about-content-two .about-card:nth-child(2){ animation-delay: 180ms; }
-                  .about-content-two .about-card:nth-child(3){ animation-delay: 300ms; }
-                  .about-content-two .about-card:nth-child(4){ animation-delay: 420ms; }
-                  @keyframes fadeUp {
-                    from { opacity: 0; transform: translateY(14px); }
-                    to   { opacity: 1; transform: translateY(0); }
-                  }
-                </style>
-                <style>
-                  /* Green glow breathing animation for icons in Value cards */
-                  .value-grid-new .value-icon-new{
-                    position: relative;
-                  }
-                  .value-grid-new .value-icon-new::after{
-                    content: "";
-                    position: absolute;
-                    inset: -1px; /* ultra subtle glow area */
-                    border-radius: inherit;
-                    animation: breathingGreen 8s ease-in-out infinite; /* slowest, very gentle */
-                  }
-                  @keyframes breathingGreen{
-                    0%, 100%{
-                      /* Match site title green (#2f6f42 → rgb(47,111,66)); slightly higher opacity */
-                      box-shadow: 0 0 0 0 rgba(47,111,66,0.05), 0 0 6px 1px rgba(47,111,66,0.14);
-                      transform: scale(1);
-                    }
-                    50%{
-                      box-shadow: 0 0 0 4px rgba(47,111,66,0.05), 0 0 14px 4px rgba(47,111,66,0.24);
-                      transform: scale(1.01);
-                    }
-                  }
-                </style>    
-                    <style>
-                      /* Grid 2x2 untuk card Metode */
-                      .method-area-new .method-timeline {
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        gap: 24px;
-                        align-items: stretch;
-                        grid-auto-rows: 1fr; /* buat tinggi cell seragam */
-                      }
-                      @media (max-width: 768px) {
-                        .method-area-new .method-timeline {
-                          grid-template-columns: 1fr; /* tetap rapi di mobile */
-                        }
-                      }
-                      /* Sembunyikan elemen timeline agar fokus ke grid */
-                      .method-area-new .method-timeline .timeline-line,
-                      .method-area-new .method-timeline .timeline-dot {
-                        display: none;
-                      }
-                      /* Pastikan tiap item jadi grid cell bersih */
-                      .method-area-new .method-timeline .method-item {
-                        margin: 0;
-                        display: flex; /* biar card bisa tinggi 100% */
-                      }
-                      /* Rapikan tampilan card */
-                      .method-area-new .method-card-new {
-                        width: 100%;
-                        background: #ffffff;
-                        border-radius: 12px;
-                        padding: 28px 24px; /* perbesar padding */
-                        box-shadow: 0 10px 24px rgba(14, 72, 99, 0.08);
-                        border: 1px solid rgba(14, 72, 99, 0.06);
-                        display: flex;
-                        flex-direction: column; /* ikon di atas, konten di bawah */
-                        align-items: flex-start;
-                        gap: 14px;
-                        min-height: 220px; /* samakan tinggi minimum */
-                        height: 100%; /* isi penuh cell grid */
-                        flex: 1 1 auto; /* tumbuh agar semua sama tinggi */
-                      }
-                      /* Netralisir positioning lama */
-                      .method-area-new .method-card-new.left,
-                      .method-area-new .method-card-new.right {
-                        float: none;
-                      }
-                      .method-area-new .method-icon-new {
-                        font-size: 32px; /* sedikit diperbesar */
-                        line-height: 1;
-                        flex: 0 0 auto;
-                        margin-bottom: 8px; /* beri jarak dari konten */
-                      }
-                      .method-area-new .method-content {
-                        flex: 1 1 auto;
-                      }
-                    </style>                            
-</head>
+      @media (max-width: 576px) {
+        .method-area-new .method-timeline {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* Value grid: responsive auto-fit columns */
+      .value-area-new .value-grid-new {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+        gap: 24px;
+        align-items: stretch;
+      }
+      /* Ensure cards stretch to column width */
+      .value-area-new .value-card-new {
+        width: 100%;
+      }
+      /* Extra fallback breakpoints for tighter laptops */
+      @media (max-width: 1200px) {
+        .value-area-new .value-grid-new {
+          grid-template-columns: repeat(3, minmax(240px, 1fr)) !important;
+        }
+      }
+      /* Responsive fallbacks */
+      @media (max-width: 992px) {
+        .value-area-new .value-grid-new {
+          grid-template-columns: repeat(2, minmax(220px, 1fr));
+        }
+      }
+      @media (max-width: 576px) {
+        .value-area-new .value-grid-new {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
+    <style id="about-section-styles">
+      /* ===== About Section: CSS terpusat, grid stabil, desain menarik ===== */
+      .about-area {
+        background: linear-gradient(
+          180deg,
+          rgba(233, 220, 197, 0.15) 0%,
+          rgba(255, 255, 255, 0.95) 100%
+        );
+        /* Kurangi jarak atas section agar judul lebih dekat ke tepi atas */
+        padding-top: 88px; /* override dari pt-120 */
+      }
+      /* Grid 2 kolom yang stabil */
+      .about-area .about-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* jadikan satu kolom */
+        gap: 28px;
+        align-items: start;
+        justify-items: center; /* pusatkan konten */
+      }
+      @media (max-width: 992px) {
+        .about-area .about-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+      /* Hilangkan aturan image frame karena gambar dihapus */
+      /* Info wrapper spacing */
+      .about-area .about-info {
+        width: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      /* Kurangi jarak atas keseluruhan konten About secara ringan */
+      .about-area .about-info .about-content-two {
+        margin-top: 14px;
+      }
+      /* Perbesar jarak bawah judul, sedikit kurangi jarak atas */
+      .about-area .about-info .section-title {
+        margin-top: 0 !important;
+        margin-bottom: 32px !important;
+        text-align: center;
+      }
+      .about-area .about-info .section-title .title {
+        line-height: 1.2;
+        color: var(--clr-deep-green, #1f4d32);
+        position: relative;
+      }
+      .about-area .about-info .section-title .title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 64px;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(
+          90deg,
+          var(--clr-orange, #d7633b),
+          var(--clr-yellow, #efc24e)
+        );
+      }
+      /* Panel konten */
+      .about-content-two .about-panel {
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 24px 22px;
+        box-shadow: 0 14px 30px rgba(14, 72, 99, 0.08);
+        border: 1px solid rgba(14, 72, 99, 0.08);
+      }
+      .about-content-two .about-panel .lead {
+        font-size: 20px;
+        line-height: 1.6;
+        color: var(--clr-green, #2f6f42);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .about-content-two .about-panel p {
+        color: #555;
+        margin-bottom: 12px;
+      }
+      /* Grid kartu keunggulan */
+      .about-content-two .about-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 12px;
+      }
+      @media (min-width: 992px) {
+        .about-content-two .about-cards {
+          grid-template-columns: 1fr 1fr;
+          gap: 18px 20px;
+        }
+      }
+      .about-content-two .about-card {
+        position: relative;
+        background: #fff;
+        border: 1px solid rgba(14, 72, 99, 0.08);
+        border-radius: 14px;
+        padding: 18px 16px 18px 20px;
+        box-shadow: 0 6px 18px rgba(14, 72, 99, 0.08);
+        transition:
+          transform 220ms ease,
+          box-shadow 220ms ease;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(14px);
+        animation: fadeUp 520ms ease forwards;
+      }
+      .about-content-two .about-card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(
+          180deg,
+          var(--clr-green, #2f6f42),
+          rgba(47, 111, 66, 0.5)
+        );
+      }
+      .about-content-two .about-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(14, 72, 99, 0.14);
+      }
+      .about-content-two .about-card .card-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(47, 111, 66, 0.1);
+        color: var(--clr-green, #2f6f42);
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .about-content-two .about-card .card-title {
+        font-size: 18px;
+        color: var(--clr-deep-green, #0f2b0a);
+        margin: 0 0 6px;
+        font-weight: 600;
+      }
+      .about-content-two .about-card .card-desc {
+        margin: 0;
+        color: #555;
+      }
+      /* Animasi masuk bertahap */
+      .about-content-two .about-card:nth-child(1) {
+        animation-delay: 60ms;
+      }
+      .about-content-two .about-card:nth-child(2) {
+        animation-delay: 180ms;
+      }
+      .about-content-two .about-card:nth-child(3) {
+        animation-delay: 300ms;
+      }
+      .about-content-two .about-card:nth-child(4) {
+        animation-delay: 420ms;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <style>
+      /* Green glow breathing animation for icons in Value cards */
+      .value-grid-new .value-icon-new {
+        position: relative;
+      }
+      .value-grid-new .value-icon-new::after {
+        content: "";
+        position: absolute;
+        inset: -1px; /* ultra subtle glow area */
+        border-radius: inherit;
+        animation: breathingGreen 8s ease-in-out infinite; /* slowest, very gentle */
+      }
+      @keyframes breathingGreen {
+        0%,
+        100% {
+          /* Match site title green (#2f6f42 → rgb(47,111,66)); slightly higher opacity */
+          box-shadow:
+            0 0 0 0 rgba(47, 111, 66, 0.05),
+            0 0 6px 1px rgba(47, 111, 66, 0.14);
+          transform: scale(1);
+        }
+        50% {
+          box-shadow:
+            0 0 0 4px rgba(47, 111, 66, 0.05),
+            0 0 14px 4px rgba(47, 111, 66, 0.24);
+          transform: scale(1.01);
+        }
+      }
+    </style>
+    <style>
+      /* Grid 2x2 untuk card Metode */
+      .method-area-new .method-timeline {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        align-items: stretch;
+        grid-auto-rows: 1fr; /* buat tinggi cell seragam */
+      }
+      @media (max-width: 768px) {
+        .method-area-new .method-timeline {
+          grid-template-columns: 1fr; /* tetap rapi di mobile */
+        }
+      }
+      /* Sembunyikan elemen timeline agar fokus ke grid */
+      .method-area-new .method-timeline .timeline-line,
+      .method-area-new .method-timeline .timeline-dot {
+        display: none;
+      }
+      /* Pastikan tiap item jadi grid cell bersih */
+      .method-area-new .method-timeline .method-item {
+        margin: 0;
+        display: flex; /* biar card bisa tinggi 100% */
+      }
+      /* Rapikan tampilan card */
+      .method-area-new .method-card-new {
+        width: 100%;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 28px 24px; /* perbesar padding */
+        box-shadow: 0 10px 24px rgba(14, 72, 99, 0.08);
+        border: 1px solid rgba(14, 72, 99, 0.06);
+        display: flex;
+        flex-direction: column; /* ikon di atas, konten di bawah */
+        align-items: flex-start;
+        gap: 14px;
+        min-height: 220px; /* samakan tinggi minimum */
+        height: 100%; /* isi penuh cell grid */
+        flex: 1 1 auto; /* tumbuh agar semua sama tinggi */
+      }
+      /* Netralisir positioning lama */
+      .method-area-new .method-card-new.left,
+      .method-area-new .method-card-new.right {
+        float: none;
+      }
+      .method-area-new .method-icon-new {
+        font-size: 32px; /* sedikit diperbesar */
+        line-height: 1;
+        flex: 0 0 auto;
+        margin-bottom: 8px; /* beri jarak dari konten */
+      }
+      .method-area-new .method-content {
+        flex: 1 1 auto;
+      }
+    </style>
+  </head>
 
-<body>
-
-
+  <body>
     <!-- body wrap start -->
     <div class="body_wrap">
-
-        <!-- preloder start -->
-        <div id="loading">
-            <div id="loading-center">
-                <div id="loading-center-absolute">
-                    <div class="object" id="object_one"></div>
-                    <div class="object" id="object_two"></div>
-                    <div class="object" id="object_three"></div>
-                    <div class="object" id="object_four"></div>
-                    
-                </div>
-            </div>
+      <!-- preloder start -->
+      <div id="loading">
+        <div id="loading-center">
+          <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+          </div>
         </div>
-        <!-- preloder end -->
+      </div>
+      <!-- preloder end -->
 
-        <!-- back to top start -->
-        <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
+      <!-- back to top start -->
+      <div class="progress-wrap">
+        <svg
+          class="progress-circle svg-content"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+      </div>
+      <!-- back to top end -->
+
+      <!-- header start -->
+      <header class="header-area">
+        <div
+          class="header-bottom-area"
+          data-uk-sticky="top: 250; animation: uk-animation-slide-top;"
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-2 col-lg-2 col-6">
+                <div
+                  class="logo logo-with-title"
+                  style="display: flex; align-items: center; gap: 10px"
+                >
+                  <a
+                    href="index.html"
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                      text-decoration: none;
+                    "
+                  >
+                    <img
+                      src="assets/img/image-asset/logo.jpeg"
+                      style="height: 70px"
+                      alt="logo"
+                    />
+                    <span
+                      class="site-title"
+                      style="
+                        font-weight: 700;
+                        font-size: 20px;
+                        color: #1f2a1f;
+                        line-height: 1;
+                      "
+                      >Jadi Juara</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <div class="col-xl-7 col-lg-7 d-none d-lg-block">
+                <div class="main-menu-wrap">
+                  <nav id="mobile-menu" class="main-menu">
+                    <ul class="main-menu-list ul_li">
+                      <li><a href="index.html">Home</a></li>
+                      <li class="active">
+                        <a href="Harus-Jadi-Juara.html">Harus Jadi Juara</a>
+                      </li>
+                      <li><a href="Jadi-Juara.html">Jadi Juara</a></li>
+                      <li><a href="Paket-Belajar.html">Paket Belajar</a></li>
+                      <li><a href="Kontak.html">Kontak</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-6">
+                <div class="header-right">
+                  <div class="header-btn">
+                    <a class="thm-btn" href="https://wa.me/628567887669"
+                      >Daftar Sekarang</a
+                    >
+                  </div>
+                  <div class="side-mobile-menu">
+                    <button class="side-info-close">
+                      <i class="far fa-times"></i>
+                    </button>
+                    <div class="mobile-menu"></div>
+                  </div>
+                  <div class="side-menu-icon d-lg-none">
+                    <button class="side-toggle">
+                      <i class="far fa-bars"></i>
+                    </button>
+                  </div>
+                  <div class="offcanvas-overlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- back to top end -->
+      </header>
+      <!-- header end -->
 
-        <!-- header start -->
-        <header class="header-area">         
-            <div class="header-bottom-area" data-uk-sticky="top: 250; animation: uk-animation-slide-top;">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-2 col-lg-2 col-6">
-                            <div class="logo logo-with-title" style="display: flex; align-items: center; gap: 10px;">
-                                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                                    <img src="assets/img/image-asset/logo.jpeg" style="height: 70px;" alt="logo">
-                                    <span class="site-title" style="font-weight: 700; font-size: 20px; color: #1f2a1f; line-height: 1;">Jadi Juara</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-7 d-none d-lg-block">
-                            <div class="main-menu-wrap">
-                                <nav id="mobile-menu" class="main-menu">
-                                    <ul class="main-menu-list ul_li">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li class="active"><a href="Harus-Jadi-Juara.html">Harus Jadi Juara</a></li>
-                                        <li><a href="Jadi-Juara.html">Jadi Juara</a></li>
-                                        <li><a href="Paket-Belajar.html">Paket Belajar</a></li>
-                                        <li><a href="Kontak.html">Kontak</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-6">
-                            <div class="header-right">
-                                <div class="header-btn">
-                                    <a class="thm-btn" href="https://wa.me/628567887669">Daftar Sekarang</a>
-                                </div>
-                                <div class="side-mobile-menu">
-                                    <button class="side-info-close"><i class="far fa-times"></i></button>
-                                    <div class="mobile-menu"></div>
-                                </div>
-                                <div class="side-menu-icon d-lg-none">
-                                    <button class="side-toggle"><i class="far fa-bars"></i></button>
-                                </div>
-                                <div class="offcanvas-overlay"></div>
-                            </div>
-                        </div> 
-                    </div>
+      <main>
+        <!-- page title start -->
+        <div
+          class="page-title-area section-notch pt-170 pb-170"
+          data-background="assets/img/image-asset/img-4.jpg"
+        >
+          <div class="banner-overlay"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="page-title">
+                  <h2>Harus Jadi Juara</h2>
+                  <div class="breadcrumb-list text-left">
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li>Harus Jadi Juara</li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-        </header>
-        <!-- header end -->
-
-        <main>
-         <!-- page title start -->
-         <div class="page-title-area section-notch pt-170 pb-170" data-background="assets/img/image-asset/img-4.jpg">
-            <div class="banner-overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="page-title">
-                            <h2>Harus Jadi Juara</h2>
-                            <div class="breadcrumb-list text-left">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>Harus Jadi Juara</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
         <!-- page title end -->
 
         <!-- about start -->
         <section class="about-area pt-120 pb-120 section-notch">
-            <div class="container">
-                <div class="about-grid">
-                  <div class="about-info">
-                    <div class="about-content-two mt-25">
-                            <div class="section-title mb-20">
-                                <h2 class="title">Keunggulan Jadi Juara</h2>
-                            </div>
-                            
-                            <div class="about-panel">
-                              <p class="lead">Belajar jadi seru!</p>
-                              <p>Dari rumah aja, tetap paham, makin pintar setiap hari.</p>
-                              <p>Kami percaya, setiap anak adalah juara dengan caranya sendiri. Karena itu, Jadi Juara hadir bukan hanya untuk membantu belajar, tapi juga menumbuhkan potensi dan percaya diri anak melalui pendampingan yang hangat dan menyenangkan.</p>
-                              <div class="about-cards">
-                                <article class="about-card">
-                                  <span class="card-badge">1</span>
-                                  <h5 class="card-title">Pendekatan Personal</h5>
-                                  <p class="card-desc">Setiap anak punya gaya belajar unik. Tutor kami menyesuaikan karakter dan gaya belajar masing-masing siswa agar proses belajar nyaman dan efektif.</p>
-                                </article>
-                                <article class="about-card">
-                                  <span class="card-badge">2</span>
-                                  <h5 class="card-title">Tutor = Teman Belajar</h5>
-                                  <p class="card-desc">Tutor adalah mahasiswa terlatih yang melewati seleksi dan pelatihan. Usia yang dekat membuat suasana belajar akrab, santai, dan menyenangkan, tetap fokus dan produktif.</p>
-                                </article>
-                                <article class="about-card">
-                                  <span class="card-badge">3</span>
-                                  <h5 class="card-title">Kurikulum Terarah</h5>
-                                  <p class="card-desc">Materi fokus pada Bahasa Indonesia, Bahasa Inggris, Matematika, dan IPAS, menyesuaikan kurikulum sekolah dan kebutuhan siswa untuk memahami konsep secara mendalam.</p>
-                                </article>
-                                <article class="about-card">
-                                  <span class="card-badge">4</span>
-                                  <h5 class="card-title">Pemantauan Perkembangan</h5>
-                                  <p class="card-desc">Orang tua mendapat laporan perkembangan rutin sehingga dapat melihat kemajuan anak dan area yang masih membutuhkan dukungan.</p>
-                                </article>
-                              </div>
-                            </div>
+          <div class="container">
+            <div class="about-grid">
+              <div class="about-info">
+                <div class="about-content-two mt-25">
+                  <div class="section-title mb-20">
+                    <h2 class="title">Keunggulan Jadi Juara</h2>
+                  </div>
+
+                  <div class="about-panel">
+                    <p class="lead">Belajar jadi seru!</p>
+                    <p>
+                      Dari rumah aja, tetap paham, makin pintar setiap hari.
+                    </p>
+                    <p>
+                      Kami percaya, setiap anak adalah juara dengan caranya
+                      sendiri. Karena itu, Jadi Juara hadir bukan hanya untuk
+                      membantu belajar, tapi juga menumbuhkan potensi dan
+                      percaya diri anak melalui pendampingan yang hangat dan
+                      menyenangkan.
+                    </p>
+                    <div class="about-cards">
+                      <article class="about-card">
+                        <span class="card-badge">1</span>
+                        <h5 class="card-title">Pendekatan Personal</h5>
+                        <p class="card-desc">
+                          Setiap anak punya gaya belajar unik. Tutor kami
+                          menyesuaikan karakter dan gaya belajar masing-masing
+                          siswa agar proses belajar nyaman dan efektif.
+                        </p>
+                      </article>
+                      <article class="about-card">
+                        <span class="card-badge">2</span>
+                        <h5 class="card-title">Tutor = Teman Belajar</h5>
+                        <p class="card-desc">
+                          Tutor adalah mahasiswa terlatih yang melewati seleksi
+                          dan pelatihan. Usia yang dekat membuat suasana belajar
+                          akrab, santai, dan menyenangkan, tetap fokus dan
+                          produktif.
+                        </p>
+                      </article>
+                      <article class="about-card">
+                        <span class="card-badge">3</span>
+                        <h5 class="card-title">Kurikulum Terarah</h5>
+                        <p class="card-desc">
+                          Materi fokus pada Bahasa Indonesia, Bahasa Inggris,
+                          Matematika, dan IPAS, menyesuaikan kurikulum sekolah
+                          dan kebutuhan siswa untuk memahami konsep secara
+                          mendalam.
+                        </p>
+                      </article>
+                      <article class="about-card">
+                        <span class="card-badge">4</span>
+                        <h5 class="card-title">Pemantauan Perkembangan</h5>
+                        <p class="card-desc">
+                          Orang tua mendapat laporan perkembangan rutin sehingga
+                          dapat melihat kemajuan anak dan area yang masih
+                          membutuhkan dukungan.
+                        </p>
+                      </article>
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
+          </div>
         </section>
         <!-- about end -->
 
         <!-- Value section start -->
-        <section class="value-area-new section-notch pt-120 pb-90 position-relative overflow-hidden will-animate" data-animate="fadeInUp" data-animate-delay="0.05s">
-            <div class="floating-circles">
-                <div class="circle circle-1"></div>
-                <div class="circle circle-2"></div>
-                <div class="circle circle-3"></div>
-                <div class="circle circle-4"></div>
-                <div class="circle circle-5"></div>
-            </div>
-            <div class="container position-relative">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center mb-55">
-                            <h2 class="title">Value</h2>
-                            <p>
-                              Belajar bukan sekedar meraih nilai, tapi memahami dan mengembangkan potensi setiap anak untuk jadi juara versi terbaik dirinya. <br> <br>
-                              <b>Jadi Juara</b> hadir untuk menciptakan pengalaman belajar yang bermakna, di mana setiap anak merasa dihargai, didukung, dan termotivasi untuk terus berkembang.
-                              Kami percaya bahwa setiap langkah kecil dalam proses belajar adalah bagian dari perjalanan besar menuju kesuksesan.
-                            </p>
-                        </div>
-                    </div>
+        <section
+          class="value-area-new section-notch pt-120 pb-90 position-relative overflow-hidden will-animate"
+          data-animate="fadeInUp"
+          data-animate-delay="0.05s"
+        >
+          <div class="floating-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="circle circle-4"></div>
+            <div class="circle circle-5"></div>
+          </div>
+          <div class="container position-relative">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="section-title text-center mb-55">
+                  <h2 class="title">Value</h2>
+                  <p>
+                    Belajar bukan sekedar meraih nilai, tapi memahami dan
+                    mengembangkan potensi setiap anak untuk jadi juara versi
+                    terbaik dirinya. <br />
+                    <br />
+                    <b>Jadi Juara</b> hadir untuk menciptakan pengalaman belajar
+                    yang bermakna, di mana setiap anak merasa dihargai,
+                    didukung, dan termotivasi untuk terus berkembang. Kami
+                    percaya bahwa setiap langkah kecil dalam proses belajar
+                    adalah bagian dari perjalanan besar menuju kesuksesan.
+                  </p>
                 </div>
-                <div class="value-grid-new">
-                    <div class="value-card-new will-animate" data-animate="fadeInUp" data-animate-delay="0.1s">
-                        <div class="value-card-header">
-                          <div class="value-number">01</div>
-                          <div class="value-icon-new gradient-green">
-                              <i class="fas fa-users"></i>
-                          </div>
-                        </div>
-                        <div class="value-content value-card-body">
-                            <h5>Inklusif & Menumbuhkan Semangat</h5>
-                            <p>Semua anak dengan kemampuan apa pun, dapat belajar tanpa rasa takut gagal.</p>
-                        </div>
-                        <div class="value-glow gradient-green"></div>
-                    </div>
-                    <div class="value-card-new will-animate" data-animate="fadeInUp" data-animate-delay="0.2s">
-                        <div class="value-card-header">
-                          <div class="value-number">02</div>
-                          <div class="value-icon-new gradient-orange">
-                              <i class="fas fa-chart-line"></i>
-                          </div>
-                        </div>
-                        <div class="value-content value-card-body">
-                            <h5>Konsisten dan Terukur</h5>
-                            <p>Setiap proses belajar dirancang dengan target yang jelas, agar anak mampu melihat kemajuannya sendiri.</p>
-                        </div>
-                        <div class="value-glow gradient-orange"></div>
-                    </div>
-                    <div class="value-card-new will-animate" data-animate="fadeInUp" data-animate-delay="0.3s">
-                        <div class="value-card-header">
-                          <div class="value-number">03</div>
-                          <div class="value-icon-new gradient-blue">
-                              <i class="fas fa-smile"></i>
-                          </div>
-                        </div>
-                        <div class="value-content value-card-body">
-                            <h5>Kebahagiaan dalam Belajar</h5>
-                            <p>Belajar tidak lagi menjadi beban, tapi menjadi perjalanan seru menuju keberhasilan.</p>
-                        </div>
-                        <div class="value-glow gradient-blue"></div>
-                    </div>
-                    <div class="value-card-new will-animate" data-animate="fadeInUp" data-animate-delay="0.4s">
-                        <div class="value-card-header">
-                          <div class="value-number">04</div>
-                          <div class="value-icon-new gradient-pink">
-                              <i class="fas fa-handshake"></i>
-                          </div>
-                        </div>
-                        <div class="value-content value-card-body">
-                            <h5>Kolaboratif</h5>
-                            <p>Orang tua, tutor, dan tim Jadi Juara berjalan bersama membantu anak menjadi versi terbaik dirinya.</p>
-                        </div>
-                        <div class="value-glow gradient-pink"></div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="value-grid-new">
+              <div
+                class="value-card-new will-animate"
+                data-animate="fadeInUp"
+                data-animate-delay="0.1s"
+              >
+                <div class="value-card-header">
+                  <div class="value-number">01</div>
+                  <div class="value-icon-new gradient-green">
+                    <i class="fas fa-users"></i>
+                  </div>
+                </div>
+                <div class="value-content value-card-body">
+                  <h5>Inklusif & Menumbuhkan Semangat</h5>
+                  <p>
+                    Semua anak dengan kemampuan apa pun, dapat belajar tanpa
+                    rasa takut gagal.
+                  </p>
+                </div>
+                <div class="value-glow gradient-green"></div>
+              </div>
+              <div
+                class="value-card-new will-animate"
+                data-animate="fadeInUp"
+                data-animate-delay="0.2s"
+              >
+                <div class="value-card-header">
+                  <div class="value-number">02</div>
+                  <div class="value-icon-new gradient-orange">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                </div>
+                <div class="value-content value-card-body">
+                  <h5>Konsisten dan Terukur</h5>
+                  <p>
+                    Setiap proses belajar dirancang dengan target yang jelas,
+                    agar anak mampu melihat kemajuannya sendiri.
+                  </p>
+                </div>
+                <div class="value-glow gradient-orange"></div>
+              </div>
+              <div
+                class="value-card-new will-animate"
+                data-animate="fadeInUp"
+                data-animate-delay="0.3s"
+              >
+                <div class="value-card-header">
+                  <div class="value-number">03</div>
+                  <div class="value-icon-new gradient-blue">
+                    <i class="fas fa-smile"></i>
+                  </div>
+                </div>
+                <div class="value-content value-card-body">
+                  <h5>Kebahagiaan dalam Belajar</h5>
+                  <p>
+                    Belajar tidak lagi menjadi beban, tapi menjadi perjalanan
+                    seru menuju keberhasilan.
+                  </p>
+                </div>
+                <div class="value-glow gradient-blue"></div>
+              </div>
+              <div
+                class="value-card-new will-animate"
+                data-animate="fadeInUp"
+                data-animate-delay="0.4s"
+              >
+                <div class="value-card-header">
+                  <div class="value-number">04</div>
+                  <div class="value-icon-new gradient-pink">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                </div>
+                <div class="value-content value-card-body">
+                  <h5>Kolaboratif</h5>
+                  <p>
+                    Orang tua, tutor, dan tim Jadi Juara berjalan bersama
+                    membantu anak menjadi versi terbaik dirinya.
+                  </p>
+                </div>
+                <div class="value-glow gradient-pink"></div>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- Value section end -->
 
-        <section class="method-area-new section-notch cheerful pt-120 pb-120 position-relative will-animate" data-animate="fadeInUp" data-animate-delay="0.12s">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center mb-55">
-                            <h2 class="title">Metode Belajar</h2>
-                            <p>
-                              Setiap siswa itu unik, begitu juga cara belajarnya. <br><br>
-                              Di Jadi Juara, kami percaya bahwa tidak ada satu metode yang cocok untuk semua. Karena itu, kami menyediakan kurikulum personal yang disesuaikan dengan gaya belajar, kelebihan, dan kebutuhan setiap anak. Dengan bimbingan intensif dari tutor berpengalaman, kami memastikan setiap potensi terasah maksimal. <br><br>
-                              Lupakan metode belajar yang monoton, sambut pengalaman belajar yang adaptif dan efektif!
-                            </p>
-                        </div>
-                    </div>
+        <section
+          class="method-area-new section-notch cheerful pt-120 pb-120 position-relative will-animate"
+          data-animate="fadeInUp"
+          data-animate-delay="0.12s"
+        >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="section-title text-center mb-55">
+                  <h2 class="title">Metode Belajar</h2>
+                  <p>
+                    Setiap siswa itu unik, begitu juga cara belajarnya.
+                    <br /><br />
+                    Di Jadi Juara, kami percaya bahwa tidak ada satu metode yang
+                    cocok untuk semua. Karena itu, kami menyediakan kurikulum
+                    personal yang disesuaikan dengan gaya belajar, kelebihan,
+                    dan kebutuhan setiap anak. Dengan bimbingan intensif dari
+                    tutor berpengalaman, kami memastikan setiap potensi terasah
+                    maksimal. <br /><br />
+                    Lupakan metode belajar yang monoton, sambut pengalaman
+                    belajar yang adaptif dan efektif!
+                  </p>
                 </div>
-                <div class="method-timeline">
-                    <div class="timeline-line"></div>
-                    <div class="method-item theme-coral will-animate" data-animate="fadeInLeft" data-animate-delay="0.1s">
-                        <div class="method-card-new left">
-                            <div class="method-icon-new">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="method-content">
-                                <h5>Fun Learning</h5>
-                                <p>Aktivitas belajar tidak hanya duduk dan mendengarkan, tapi dikemas dalam permainan edukatif dan diskusi ringan agar anak aktif berpartisipasi.</p>            
-                            </div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="method-item theme-orange will-animate" data-animate="fadeInRight" data-animate-delay="0.2s">
-                        <div class="method-card-new right">
-                            <div class="method-icon-new">
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <div class="method-content">
-                                <h5>Concept-Based Teaching</h5>
-                                <p>Anak diarahkan untuk memahami “mengapa” dan “bagaimana”, bukan sekadar mengingat rumus atau definisi.</p>             
-                            </div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="method-item theme-sand will-animate" data-animate="fadeInLeft" data-animate-delay="0.3s">
-                        <div class="method-card-new left">
-                            <div class="method-icon-new">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                            </div>
-                            <div class="method-content">
-                                <h5>Progressive Feedback</h5>
-                                <p>Tutor memberikan umpan balik langsung dan motivasi positif setiap sesi.</p>                            
-                            </div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>
-                    <div class="method-item theme-sand will-animate" data-animate="fadeInLeft" data-animate-delay="0.3s">
-                        <div class="method-card-new left">
-                            <div class="method-icon-new">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                            </div>
-                            <div class="method-content">
-                                <h5>Mini Evaluation</h5>
-                                <p>Evaluasi kecil tiap minggu untuk memantau perkembangan siswa tanpa menimbulkan stres.</p>                            
-                            </div>
-                        </div>
-                        <div class="timeline-dot"></div>
-                    </div>                    
+              </div>
+            </div>
+            <div class="method-timeline">
+              <div class="timeline-line"></div>
+              <div
+                class="method-item theme-coral will-animate"
+                data-animate="fadeInLeft"
+                data-animate-delay="0.1s"
+              >
+                <div class="method-card-new left">
+                  <div class="method-icon-new">
+                    <i class="fas fa-brain"></i>
+                  </div>
+                  <div class="method-content">
+                    <h5>Fun Learning</h5>
+                    <p>
+                      Aktivitas belajar tidak hanya duduk dan mendengarkan, tapi
+                      dikemas dalam permainan edukatif dan diskusi ringan agar
+                      anak aktif berpartisipasi.
+                    </p>
+                  </div>
                 </div>
+                <div class="timeline-dot"></div>
+              </div>
+              <div
+                class="method-item theme-orange will-animate"
+                data-animate="fadeInRight"
+                data-animate-delay="0.2s"
+              >
+                <div class="method-card-new right">
+                  <div class="method-icon-new">
+                    <i class="fas fa-tasks"></i>
+                  </div>
+                  <div class="method-content">
+                    <h5>Concept-Based Teaching</h5>
+                    <p>
+                      Anak diarahkan untuk memahami “mengapa” dan “bagaimana”,
+                      bukan sekadar mengingat rumus atau definisi.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-dot"></div>
+              </div>
+              <div
+                class="method-item theme-sand will-animate"
+                data-animate="fadeInLeft"
+                data-animate-delay="0.3s"
+              >
+                <div class="method-card-new left">
+                  <div class="method-icon-new">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                  </div>
+                  <div class="method-content">
+                    <h5>Progressive Feedback</h5>
+                    <p>
+                      Tutor memberikan umpan balik langsung dan motivasi positif
+                      setiap sesi.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-dot"></div>
+              </div>
+              <div
+                class="method-item theme-sand will-animate"
+                data-animate="fadeInLeft"
+                data-animate-delay="0.3s"
+              >
+                <div class="method-card-new left">
+                  <div class="method-icon-new">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                  </div>
+                  <div class="method-content">
+                    <h5>Mini Evaluation</h5>
+                    <p>
+                      Evaluasi kecil tiap minggu untuk memantau perkembangan
+                      siswa tanpa menimbulkan stres.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-dot"></div>
+              </div>
             </div>
-            <div class="method-bg-circles">
-                <div class="bg-circle bg-circle-1"></div>
-                <div class="bg-circle bg-circle-2"></div>
-                <div class="bg-circle bg-circle-3"></div>
-            </div>
+          </div>
+          <div class="method-bg-circles">
+            <div class="bg-circle bg-circle-1"></div>
+            <div class="bg-circle bg-circle-2"></div>
+            <div class="bg-circle bg-circle-3"></div>
+          </div>
         </section>
         <!-- Metode Belajar section end -->
-        </main>
+      </main>
 
-        <!-- footer start -->
-        <footer>
-            <div class="footer-area">
-                <div class="footer-bottom pt-100 pb-60">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="footer-widget mb-40">
-                                    <h3>About Jadi Juara</h3>
-                                    <p style="text-align: justify; line-height: 1.3;">
-                                      Jadi Juara adalah bimbingan belajar online untuk siswa SD kelas 1-6 dengan fokus utama pada mata pelajaran Bahasa Indonesia, Bahasa Inggris, Matematika, dan IPAS. <br><br>
-                                      Kami membantu anak belajar dengan cara yang menyenangkan, interaktif, dan sesuai kebutuhan mereka. Melalui pendekatan personal dan pemantauan rutin. Kami memastikan setiap anak dapat berkembang, percaya diri, dan menikmati proses belajar setiap hari.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="footer-widget mb-40">
-                                    <h3>Kontak Person</h3>
-                                    <ul class="contact-list">
-                                        <li><i class="fas fa-user"></i> Admin Jadi Juara</li>
-                                        <li><i class="fas fa-phone"></i> <a href="https://wa.me/628567887669">+62 856-788-7669</a></li>
-                                        <li><i class="fas fa-envelope"></i> <a href="mailto:Jadijuarastudy@gmail.com">Jadijuarastudy@gmail.com</a></li>
-                                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/jadijuara_id/" target="_blank" rel="noopener noreferrer">@jadijuara_id</a></li>
-                                        <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/share/19nhqr2nK5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Jadi Juaraa Tembalang</a></li>
-                                        <li><i class="fas fa-map-marker-alt"></i> Jl. Sumur Boto Dlm II No.3 RT.01, Sumurboto, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50269, Indonesia</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="footer-widget mb-40">
-                                    <h3>Paket Belajar</h3>
-                                    <p>Tertarik dengan paket belajar kami? Daftar sekarang!</p>
-                                    <a class="thm-btn" href="https://wa.me/628567887669">Daftar Paket Belajar</a>
-                                 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- footer start -->
+      <footer>
+        <div class="footer-area">
+          <div class="footer-bottom pt-100 pb-60">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="footer-widget mb-40">
+                    <h3>About Jadi Juara</h3>
+                    <p style="text-align: justify; line-height: 1.3">
+                      Jadi Juara adalah bimbingan belajar online untuk siswa SD
+                      kelas 1-6 dengan fokus utama pada mata pelajaran Bahasa
+                      Indonesia, Bahasa Inggris, Matematika, dan IPAS.
+                      <br /><br />
+                      Kami membantu anak belajar dengan cara yang menyenangkan,
+                      interaktif, dan sesuai kebutuhan mereka. Melalui
+                      pendekatan personal dan pemantauan rutin. Kami memastikan
+                      setiap anak dapat berkembang, percaya diri, dan menikmati
+                      proses belajar setiap hari.
+                    </p>
+                  </div>
                 </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="footer-widget mb-40">
+                    <h3>Kontak Person</h3>
+                    <ul class="contact-list">
+                      <li><i class="fas fa-user"></i> Admin Jadi Juara</li>
+                      <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="https://wa.me/628567887669"
+                          >+62 856-788-7669</a
+                        >
+                      </li>
+                      <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:Jadijuarastudy@gmail.com"
+                          >Jadijuarastudy@gmail.com</a
+                        >
+                      </li>
+                      <li>
+                        <i class="fab fa-instagram"></i>
+                        <a
+                          href="https://www.instagram.com/jadijuara_id/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >@jadijuara_id</a
+                        >
+                      </li>
+                      <li>
+                        <i class="fab fa-facebook"></i>
+                        <a
+                          href="https://www.facebook.com/share/19nhqr2nK5/?mibextid=wwXIfr"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Jadi Juaraa Tembalang</a
+                        >
+                      </li>
+                      <li>
+                        <i class="fas fa-map-marker-alt"></i> Jl. Sumur Boto Dlm
+                        II No.3 RT.01, Sumurboto, Kec. Banyumanik, Kota
+                        Semarang, Jawa Tengah 50269, Indonesia
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="footer-widget mb-40">
+                    <h3>Paket Belajar</h3>
+                    <p>Tertarik dengan paket belajar kami? Daftar sekarang!</p>
+                    <a class="thm-btn" href="https://wa.me/628567887669"
+                      >Daftar Paket Belajar</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-        </footer>
-        <!-- footer end -->
-
-        
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
     </div>
     <!-- body wrap end -->
 
@@ -704,31 +1061,46 @@
 
     <!-- Interaksi tilt untuk kartu Value -->
     <script>
-      (function(){
-        document.addEventListener('DOMContentLoaded', function(){
-          var cards = document.querySelectorAll('.value-card-new');
+      (function () {
+        document.addEventListener("DOMContentLoaded", function () {
+          var cards = document.querySelectorAll(".value-card-new");
           if (!cards.length) return;
-          var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-          cards.forEach(function(card){
-            var rect = null; var hovering = false;
-            function reset(){ card.style.transform = ''; }
-            card.addEventListener('mouseenter', function(){ hovering = true; rect = card.getBoundingClientRect(); });
-            card.addEventListener('mousemove', function(e){
+          var reduceMotion =
+            window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          cards.forEach(function (card) {
+            var rect = null;
+            var hovering = false;
+            function reset() {
+              card.style.transform = "";
+            }
+            card.addEventListener("mouseenter", function () {
+              hovering = true;
+              rect = card.getBoundingClientRect();
+            });
+            card.addEventListener("mousemove", function (e) {
               if (!hovering || reduceMotion) return;
               rect = rect || card.getBoundingClientRect();
               var x = (e.clientX - rect.left) / rect.width;
               var y = (e.clientY - rect.top) / rect.height;
-              var rx = (0.5 - y) * 10;  // rotateX max ~10deg
-              var ry = (x - 0.5) * 10;  // rotateY max ~10deg
-              card.style.transform = 'translateY(-8px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+              var rx = (0.5 - y) * 10; // rotateX max ~10deg
+              var ry = (x - 0.5) * 10; // rotateY max ~10deg
+              card.style.transform =
+                "translateY(-8px) rotateX(" +
+                rx +
+                "deg) rotateY(" +
+                ry +
+                "deg)";
             });
-            card.addEventListener('mouseleave', function(){ hovering = false; reset(); });
+            card.addEventListener("mouseleave", function () {
+              hovering = false;
+              reset();
+            });
           });
         });
       })();
     </script>
 
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>
