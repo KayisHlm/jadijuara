@@ -320,6 +320,21 @@
           .title-tujuan, .juara-page .title-tujuan { font-size: 18px; line-height: 1.6; }
         }
          </style>
+                <style>
+                  /* Pertegas teks lead di bagian Sejarah agar tidak terlihat tipis */
+                  .history-section .history-content .lead{
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 1.7;
+                    color: rgba(0,0,0,0.88);
+                    letter-spacing: 0.1px;
+                    text-align: justify;
+                  }
+                  .history-section .history-content .lead b{
+                    font-weight: 800;
+                    color: var(--clr-deep-green, #1f4d32);
+                  }
+                </style>         
   <style>
   /* Footer gradient: white → cream */
   .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
@@ -340,6 +355,19 @@
     .history-section .history-content .lead { font-size: 16px !important; line-height: 1.6; padding: 0 14px; }
   }
 </style>
+                        <style>
+                          /* Pertebal font paragraf lead agar lebih terlihat */
+                          .history-section .lead {
+                            font-weight: 700;
+                            color: rgba(0,0,0,0.86);
+                            font-size: 18px;
+                            line-height: 1.75;
+                            letter-spacing: 0.1px;
+                          }
+                          @media (min-width: 992px){
+                            .history-section .lead { font-size: 19px; }
+                          }
+                        </style>
 </head>
 
 <body>
@@ -442,21 +470,6 @@
         <!-- Section 1: Sejarah Jadi Juara -->
         <section class="history-section section-notch will-animate" data-animate="fadeInUp" data-animate-delay="0.05s">
             <div class="container">
-                <style>
-                  /* Pertegas teks lead di bagian Sejarah agar tidak terlihat tipis */
-                  .history-section .history-content .lead{
-                    font-weight: 400;
-                    font-size: 20px;
-                    line-height: 1.7;
-                    color: rgba(0,0,0,0.88);
-                    letter-spacing: 0.1px;
-                    text-align: justify;
-                  }
-                  .history-section .history-content .lead b{
-                    font-weight: 800;
-                    color: var(--clr-deep-green, #1f4d32);
-                  }
-                </style>
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="section-title text-center mb-50">
@@ -472,19 +485,7 @@
                        
                     </div>
                     <div class="history-content will-animate" data-animate="fadeInRight" data-animate-delay="0.15s">
-                        <style>
-                          /* Pertebal font paragraf lead agar lebih terlihat */
-                          .history-section .lead {
-                            font-weight: 700;
-                            color: rgba(0,0,0,0.86);
-                            font-size: 18px;
-                            line-height: 1.75;
-                            letter-spacing: 0.1px;
-                          }
-                          @media (min-width: 992px){
-                            .history-section .lead { font-size: 19px; }
-                          }
-                        </style>
+
                         <p class="lead"><b>Jadi Juara</b> didirikan pada tahun 2025 oleh empat mahasiswa Universitas Diponegoro. Ide bisnis ini berawal dari tugas mata kuliah kewirausahaan. Para pendiri melihat adanya peluang untuk membantu mahasiswa yang mengalami kesulitan finansial dengan cara mempertemukan mereka (yang memiliki ketertarikan mengajar paruh waktu) dengan orang tua siswa Sekolah Dasar yang mencari tutor les privat.</p>                        
                     </div>
                 </div>
@@ -531,9 +532,10 @@
                              <span class="icon-badge"><i class="fas fa-flag-checkered"></i></span>
                              <span class="label">Tujuan</span>
                          </div>
-                        <h5 class="title-tujuan">Kami percaya setiap anak memiliki cara yang unik untuk menjadi juara. Tujuan kami sederhana membantu mereka menemukan kembali semangat belajar melalui bimbingan privat yang menyenangkan, fleksibel, dan disesuaikan <br> dengan kebutuhan masing-masing individu. <br> <br>
-
-Karena di Jadi Juara, setiap langkah kecil menuju <br> pemahaman adalah kemenangan besar.</h5>
+                        <h5 class="title-tujuan">
+                            Kami percaya setiap anak memiliki cara yang unik untuk menjadi juara. Tujuan kami sederhana membantu mereka menemukan kembali semangat belajar melalui bimbingan privat yang menyenangkan, fleksibel, dan disesuaikan <br> dengan kebutuhan masing-masing individu. <br> <br>
+                            Karena di Jadi Juara, setiap langkah kecil menuju <br> pemahaman adalah kemenangan besar.
+                        </h5>
                         <span class="accent"></span>
                     </div>
                 </div>
@@ -638,9 +640,10 @@ Karena di Jadi Juara, setiap langkah kecil menuju <br> pemahaman adalah kemenang
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-40">
                                     <h3>About Jadi Juara</h3>
-                                    <p style="text-align: justify; line-height: 1.3;">Jadi Juara adalah bimbingan belajar online untuk siswa SD kelas 1-6 dengan fokus utama pada mata pelajaran Bahasa Indonesia, Bahasa Inggris, Matematika, dan IPAS. <br><br>
-Kami membantu anak belajar dengan cara yang menyenangkan, interaktif, dan sesuai kebutuhan mereka. Melalui pendekatan personal dan pemantauan rutin. Kami memastikan setiap anak dapat berkembang, percaya diri, dan menikmati proses belajar setiap hari.
-</p>
+                                    <p style="text-align: justify; line-height: 1.3;">
+                                        Jadi Juara adalah bimbingan belajar online untuk siswa SD kelas 1-6 dengan fokus utama pada mata pelajaran Bahasa Indonesia, Bahasa Inggris, Matematika, dan IPAS. <br><br>
+                                        Kami membantu anak belajar dengan cara yang menyenangkan, interaktif, dan sesuai kebutuhan mereka. Melalui pendekatan personal dan pemantauan rutin. Kami memastikan setiap anak dapat berkembang, percaya diri, dan menikmati proses belajar setiap hari.
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">

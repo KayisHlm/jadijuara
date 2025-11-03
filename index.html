@@ -32,6 +32,22 @@
   .footer-area { background: linear-gradient(to bottom, #ffffff 0%, #eadfcd 100%); }
   .footer-area .footer-top, .footer-area .footer-bottom { background: transparent; }
 </style>
+        <style id="home-hero-mobile">
+          .hero-slider.hero-style-1 .slide-bg-image{background-size:cover !important;background-position:center !important}
+          .hero-slider.hero-style-1 .slide-inner{position:relative}
+          @media (max-width:768px){
+            .hero-slider.hero-style-1 .slide-title h2{font-size:28px}
+          }
+          @media (max-width:576px){
+            .hero-slider.hero-style-1 .slide-inner{min-height:62vh;padding:60px 0;display:flex;align-items:center}
+            .hero-slider.hero-style-1 .slide-inner::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.2))}
+            .hero-slider.hero-style-1 .slide-title h2{font-size:24px;line-height:1.3;text-align:center;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3)}
+            .hero-slider.hero-style-1 .slide-text p{font-size:15px;line-height:1.7;text-align:center;padding:0 16px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.25)}
+            .hero-slider.hero-style-1 .slider-btn{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:10px}
+            .hero-slider.hero-style-1 .slider-btn .thm-btn,.hero-slider.hero-style-1 .slider-btn .thm-btn-2{width:88%;max-width:320px}
+            .hero-slider.hero-style-1 .swiper-button-next,.hero-slider.hero-style-1 .swiper-button-prev{display:none !important}
+          }
+        </style>
 </head>
 
 <body>
@@ -110,22 +126,6 @@
 
         <main>
             <!-- hero start -->
-        <style id="home-hero-mobile">
-          .hero-slider.hero-style-1 .slide-bg-image{background-size:cover !important;background-position:center !important}
-          .hero-slider.hero-style-1 .slide-inner{position:relative}
-          @media (max-width:768px){
-            .hero-slider.hero-style-1 .slide-title h2{font-size:28px}
-          }
-          @media (max-width:576px){
-            .hero-slider.hero-style-1 .slide-inner{min-height:62vh;padding:60px 0;display:flex;align-items:center}
-            .hero-slider.hero-style-1 .slide-inner::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.2))}
-            .hero-slider.hero-style-1 .slide-title h2{font-size:24px;line-height:1.3;text-align:center;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3)}
-            .hero-slider.hero-style-1 .slide-text p{font-size:15px;line-height:1.7;text-align:center;padding:0 16px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.25)}
-            .hero-slider.hero-style-1 .slider-btn{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:10px}
-            .hero-slider.hero-style-1 .slider-btn .thm-btn,.hero-slider.hero-style-1 .slider-btn .thm-btn-2{width:88%;max-width:320px}
-            .hero-slider.hero-style-1 .swiper-button-next,.hero-slider.hero-style-1 .swiper-button-prev{display:none !important}
-          }
-        </style>
         <section class="hero-slider hero-style-1 section-notch">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -294,9 +294,10 @@ Kami percaya setiap anak punya potensi unik. Dengan <b>pendekatan personal</b>, 
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-40">
                                     <h3>About Jadi Juara</h3>
-                                    <p style="text-align: justify; line-height: 1.3;">Jadi Juara adalah bimbingan belajar online untuk siswa SD kelas 1-6 dengan fokus utama pada mata pelajaran Bahasa Indonesia, Bahasa Inggris, Matematika, dan IPAS. <br><br>
-Kami membantu anak belajar dengan cara yang menyenangkan, interaktif, dan sesuai kebutuhan mereka. Melalui pendekatan personal dan pemantauan rutin. Kami memastikan setiap anak dapat berkembang, percaya diri, dan menikmati proses belajar setiap hari.
-</p>
+                                    <p style="text-align: justify; line-height: 1.3;">
+                                        Jadi Juara adalah bimbingan belajar online untuk siswa SD kelas 1-6 dengan fokus utama pada mata pelajaran Bahasa Indonesia, Bahasa Inggris, Matematika, dan IPAS. <br><br>
+                                        Kami membantu anak belajar dengan cara yang menyenangkan, interaktif, dan sesuai kebutuhan mereka. Melalui pendekatan personal dan pemantauan rutin. Kami memastikan setiap anak dapat berkembang, percaya diri, dan menikmati proses belajar setiap hari.
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-6">
