@@ -336,7 +336,16 @@
     </style>
   </head>
 
-  <body class="contact-page">
+<body class="contact-page">
+  <style>
+    /* Hover enhancement for all contact cards */
+    .contact-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,.12); }
+    .contact-card { cursor: pointer; }
+    .contact-card .icon { transition: transform .3s ease, filter .3s ease; }
+    .contact-card:hover .icon { transform: translateY(-2px) scale(1.06); filter: brightness(1.08) saturate(1.04); }
+    .contact-card .title, .contact-card .desc { transition: filter .3s ease; }
+    .contact-card:hover .title, .contact-card:hover .desc { filter: brightness(1.02); }
+  </style>
     <!-- body wrap start -->
     <div class="body_wrap">
       <!-- preloder start -->
@@ -704,4 +713,44 @@
       })();
     </script>
   </body>
+  <script>
+    // Make entire contact cards clickable, respecting inner links
+    document.addEventListener('DOMContentLoaded', function(){
+      var cards = document.querySelectorAll('.contact-grid .contact-card');
+      cards.forEach(function(card){
+        // Accessibility
+        card.setAttribute('tabindex','0');
+        card.setAttribute('role','link');
+        var titleEl = card.querySelector('.title');
+        if(titleEl){ card.setAttribute('aria-label', 'Buka: ' + titleEl.textContent.trim()); }
+
+        function navigateFromCard(){
+          var link = card.querySelector('a');
+          if(!link) return;
+          var href = link.getAttribute('href');
+          var target = link.getAttribute('target');
+          var rel = link.getAttribute('rel') || 'noopener';
+          if(!href) return;
+          if(target === '_blank') {
+            window.open(href, rel);
+          } else {
+            window.location.href = href;
+          }
+        }
+
+        card.addEventListener('click', function(e){
+          // If the user clicked a nested link, let the browser handle it
+          if(e.target.closest('a')) return;
+          navigateFromCard();
+        });
+
+        card.addEventListener('keydown', function(e){
+          if(e.key === 'Enter' || e.key === ' '){
+            e.preventDefault();
+            navigateFromCard();
+          }
+        });
+      });
+    });
+  </script>
 </html>
